@@ -1,0 +1,21 @@
+#include "config.h"
+#include <stdio.h>
+
+static FILE* cfg_file;
+
+void open_config(void)
+{
+    cfg_file = fopen('config', 'r');
+}
+
+void close_config(void)
+{
+    fclose(cfg_file);
+}
+
+byte read_config_byte(const char* property)
+{   
+    byte val = 0;
+    fscanf(cfg_file, (*property) + "=%d", &val);
+    return val;
+}
