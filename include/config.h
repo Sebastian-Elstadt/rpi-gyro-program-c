@@ -9,7 +9,7 @@
 #define GPSET_REGISTERS_OFFSET 0x1C // 7 (28 bytes)
 #define GPCLR_REGISTERS_OFFSET 0x28 // 10 (40 bytes)
 
-void open_config(void);
+byte open_config(void);
 void close_config(void);
 byte read_config_byte(const char* property);
 
