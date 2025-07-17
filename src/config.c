@@ -11,6 +11,7 @@ void open_config(void)
 void close_config(void)
 {
     fclose(cfg_file);
+    cfg_file = NULL;
 }
 
 byte read_config_byte(const char* property)
