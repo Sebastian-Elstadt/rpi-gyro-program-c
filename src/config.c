@@ -5,7 +5,7 @@ static FILE* cfg_file;
 
 byte open_config(void)
 {
-    cfg_file = fopen("config", 'r');
+    cfg_file = fopen("config", "r");
     if (cfg_file == NULL) { 
         printf("error: failed to open config file.\n");
         return 1;
